@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Web Site</title>
+	<meta charset="utf-8">
+	<meta name = "viewport" content = "width = device-width">
+	<link rel="stylesheet" type="text/css" href="WebStyle.css">
+	<script type="text/javascript" src="/lib/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.18/angular-ui-router.min.js"></script>
+
+
+</head>
+<body ng-app="app">
+
+	<header>
+		<div class="container">
+			<div id="branding">
+				<h1><span class="highlight">RVS </span>	Portfolio Website</h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a ui-sref ="Home" ui-sref-active = "highlight">Home </a></li>
+					<li><a ui-sref ="About"  ui-sref-active = "highlight"> About </a></li>
+					<li><a ui-sref ="Service"  ui-sref-active = "highlight">Services </a></li>
+				</ul>
+
+			</nav>
+			
+		</div>
+
+	</header>
+	
+	<ui-view></ui-view>
+
+	<footer>
+		
+
+
+		<p>First Responsive Web, Copyright &copy; All Rights reserved to me.</p>
+
+	</footer>
+
+
+</body>
+</html>
