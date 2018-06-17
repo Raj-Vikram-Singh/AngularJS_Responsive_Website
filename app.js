@@ -4,31 +4,31 @@ app.config(function($stateProvider,$urlRouterProvider) {
 	$stateProvider
 	.state('Home', {
 		url: '/home',
-		templateUrl: 'home.html',
+		templateUrl: 'views/home.html',
 		controller : 'subscribeController'
 
 	})
 
 	.state('About', {
 		url : '/about',
-		templateUrl : 'about.html',
+		templateUrl : 'views/about.html',
 		controller : 'subscribeController'
 			} )
 
 	.state('Service', {
 		url : '/services',
-		templateUrl: 'services.html',
+		templateUrl: 'views/services.html',
 		controller : 'subscribeController'
 	})
 
 	.state('thankyou',{
 		url : '/thankyou/:a',
-		templateUrl : 'thankyou.html',
+		templateUrl : 'views/thankyou.html',
 		controller : 'thankyou'
 	})
 	.state('feedback', {
 		url:'/feedback/:f',
-		templateUrl: 'feedback.html',
+		templateUrl: 'views/feedback.html',
 		controller:'feedback'
 	});
 
@@ -52,7 +52,7 @@ app.controller('subscribeController', function($scope, $state){
 			var emailPattern = /^[a-zA-z]+[a-zA-Z0-9._]+@+[0-9a-zA-Z]+\.+[a-zA-z]{2,3}$/;
 	
 
-			if(!input.match(/^[a-zA-z]+[a-zA-Z0-9._]+@+[0-9a-zA-Z]+\.+[a-zA-z]{2,3}$/)){
+			if(!input||!input.match(/^[a-zA-z]+[a-zA-Z0-9._]+@+[0-9a-zA-Z]+\.+[a-zA-z]{2,3}$/)){
 				$scope.error_message = "Please enter a valid email id";
 				}
 
